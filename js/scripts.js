@@ -1,5 +1,5 @@
-function list (task) {
-  this.item = task ;
+function List (task) {
+  this.task = task;
 };
 
 $(function () {
@@ -9,10 +9,10 @@ $(function () {
 
       event.preventDefault();
 
-      newItem = $('input#task').val();
-      newTask = new list(newItem);
+      var newItem = $('input#task').val();
+      var newTask = new List(newItem);
 
-  $('#result').append('<li>' + newTask.item + '</li>');
+  $('#result').append('<li>' + newTask.task + '</li>');
   $('input#task').val('')
 
   $('li').click(function () {
